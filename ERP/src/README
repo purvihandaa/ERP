@@ -1,0 +1,32 @@
+1) The Feedback class uses a generic type parameter (T), which means the data type for feedback attributes
+    such as courseCode, rating, and comments can be defined when an object of the Feedback class is instantiated.
+    This allows the class to handle multiple types of data while keeping the code reusable and type-safe.
+
+2) TA class is inherited by student class. It has all the functions of a student and additional (assigning grade and viewing students).
+    TA can only view/assign grades to the students enrolled in his assigned course (course of which that student is a TA)
+
+3) Exception handling :
+
+    1) Course drop deadline passed - I have used Java's local time library which would check student's dropping date
+    with the deadline date which i have made fixed (hard coded- 25th Oct 2024)
+
+    2) Invalid login- It passes an error if either the email or password credentials are wrong
+
+    3) Invalid course registration- in my registration method, i first get the total enrollment limit. after registering the course,
+     i subtract that limit number by 1 and set the new enrollment limit. When the limit becomes 0, it will throw an error of exceeding
+     enrollment limit.
+
+4) Functionalities:
+
+    1) Feedback system- I have kept the feedback system anonymous. Students can fill the feedback by giving course code, rating and comments.
+    Professor can view the feedback of the subject he is currently teaching and not all feedbacks.
+
+    2)TA - i have not made another user portal for TA as TA is a student itself. when a student is logged in, he gets an option
+    to log in as a TA further where the program checks the credentials and makes the functionalities of TA available.
+
+    3)Functions of TA includes viewing and grading the students enrolled in his assigned course.
+
+    4)Professor can assign a TA if he has completed that course. (given that the student already exists)
+
+ASSUMPTIONS: Each student has a unique roll number.
+
